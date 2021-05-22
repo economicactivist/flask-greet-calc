@@ -7,14 +7,16 @@ app = Flask(__name__)
 
 @app.route('/add')
 def addition():
+    """add a and b from query string"""
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
     result = add(a, b)
     return str(result)
 
+
 @app.route("/sub")
 def subtraction():
-    """Subtract and b parameters."""
+    """Subtract a and b from query string"""
 
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
@@ -22,9 +24,10 @@ def subtraction():
 
     return str(result)
 
+
 @app.route("/mult")
 def muliplication():
-    """Multiply a and b parameters."""
+    """Multiply a and b from query string."""
 
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
@@ -32,9 +35,10 @@ def muliplication():
 
     return str(result)
 
+
 @app.route("/div")
 def division():
-    """Divide a and b parameters."""
+    """Divide a and b from query string."""
 
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
